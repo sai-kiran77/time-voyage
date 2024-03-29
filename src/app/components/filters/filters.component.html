@@ -1,0 +1,14 @@
+<div class="filters-ct">
+    <div class="d-flex flex-column">
+        <label for="custom">Custom Keywords</label>
+        <input type="text" id="custom" placeholder="Search Custom Keywords" [(ngModel)]="customKeywords">
+    </div>
+    <div class="d-flex flex-column">
+        <label for="search">Select Keywords</label>
+        <ng-select [items]="keywords" bindLabel="name" [multiple]="true" bindValue="value"
+            [(ngModel)]="selectedKeywords">
+        </ng-select>
+    </div>
+    <button class="btn btn-secondary"
+        (click)="onFilter()">Filter</button>
+</div>

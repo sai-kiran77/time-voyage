@@ -1,0 +1,35 @@
+.timeline-section {
+    width: 100%;
+
+    .timeline-ct {
+        display: flex;
+        overflow-x: auto;
+        height: 100%;
+        width: 80%;
+        margin: auto;
+        scroll-snap-type: x mandatory;
+
+        app-timeline-card {
+            min-width: 100%;
+        }
+
+        &::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: #888;
+        }
+
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    }
+}

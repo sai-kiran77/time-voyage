@@ -1,0 +1,29 @@
+<div class="modal-header">
+    <h4 class="modal-title">{{data.title}}</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="close()"></button>
+</div>
+<div class="modal-body">
+    <p><b>Description: </b>{{data.description}}</p>
+    <ng-container *ngFor="let reference of data.references">
+        <div class="my-3" *ngIf="sourceType.YoutubeVideo == reference.sourceType">
+            <iframe height="315" width="100%" [src]="reference.value" [title]="data.title" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <div class="my-3" *ngIf="sourceType.Image == reference.sourceType">
+            <button class="zoom-in btn btn-info" (click)="zoomIn()">Zoom In</button>
+            <button class="zoom-out btn btn-info m-3" (click)="zoomOut()"
+                [ngStyle]="{'cursor': zoomLevel == 50 ? 'no-drop' : 'zoom-out'}">Zoom Out</button>
+            <img class="d-block" [src]="reference.value" [alt]="data.title"
+                [ngStyle]="{'width': zoomLevel + '%', 'height': zoomLevel + '%'}">
+        </div>
+
+        <div class="my-3" *ngIf="sourceType.Link == reference.sourceType ">
+            <a [href]="reference.value" target="_blank">Additional Resources</a>
+        </div>
+    </ng-container>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="close()">Close</button>
+</div>

@@ -1,0 +1,14 @@
+<div class="timeline-el" >
+    <div class="thumbnail-ct">
+        <div *ngIf="!timeLineData.loaded" class="skeleton-loader"></div>
+        <picture>
+            <source media="(min-width:768px)" [srcset]="timeLineData.desktop_image">
+            <img [src]="timeLineData.mobile_image" style="width: 100%;" class="thumbnail" [alt]="timeLineData.title"
+                loading="lazy" (load)="imageLoaded(timeLineData)" (click)="openModal(timeLineData)">
+        </picture>
+    </div>
+    <div class="timeline-content">
+        <h3 class="title">{{timeLineData.title}}</h3>
+        <h4 class="date">{{timeLineData.date}}</h4>
+    </div>
+</div>

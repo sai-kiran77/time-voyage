@@ -1,0 +1,13 @@
+.modal-body {
+    img {
+        transition: transform 0.5s ease;
+    }
+
+    .zoom-in {
+        cursor: zoom-in;
+    }
+
+    .zoom-out {
+        cursor: zoom-out;
+    }
+}

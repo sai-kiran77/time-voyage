@@ -33,4 +33,8 @@ export class TimelineComponent {
       })
     })
   }
+
+  trackByFn(index: any, item: any) {
+    return item.id;
+  }
 }

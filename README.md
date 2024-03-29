@@ -1,7 +1,7 @@
 ## Overview
 ### TimeVoyage: A Journey Through History
 #### Description: TimeVoyage is a user-friendly  Angular web application that presents a chronological timeline of historical events in a simple and intuitive interface.
-
+##### Deployed URL: https://time-voyage.vercel.app/
 ## Features
 - Horizontal Timeline: Explore different time periods in a chronological order by scrolling horizontally through the timeline.
 - Interactive Popup: Dive deeper into the timeline's content with interactive popups providing additional resources such as images, videos, or links.
